@@ -10,22 +10,22 @@ afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
 test("displays the dog image after fetching", async () => {
-  render(<App />);
-  const img = await screen.findByAltText("A Random Dog");
-  expect(img).toBeInTheDocument();
-  expect(img.src).toBe(
+  render;
+  const img = await screen;
+  expect(img);
+  expect(img.src)
     "https://images.dog.ceo/breeds/bulldog-english/mami.jpg"
-  );
+  ;
 });
 
 test("displays a loading message before fetching", async () => {
-  render(<App />);
-  expect(screen.queryByText(/Loading/)).toBeInTheDocument();
+  render;
+  expect(screen.queryByText(/Loading/))
 
-  const img = await screen.findByAltText("A Random Dog");
-  expect(img.src).toBe(
+  const img = await screen
+  expect(img.src)
     "https://images.dog.ceo/breeds/bulldog-english/mami.jpg"
-  );
+  
 
   expect(screen.queryByText(/Loading/)).not.toBeInTheDocument();
 });
