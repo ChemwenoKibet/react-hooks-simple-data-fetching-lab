@@ -1,6 +1,6 @@
 // create your App component here
 import react from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const App = () => {
     const [dogImage, setDogImage] = useState(null)
